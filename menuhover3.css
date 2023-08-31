@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.hover__div {
+  display: flex;
+  gap: 25px;
+  padding: 25px;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
+.mark::before {
+    content: "";
+    border-width: 5.5px;
+    border-style: solid;
+    border-color: transparent rgb(0, 157, 255) transparent transparent;
+
+    position: absolute;
+    left: -5px;
+    top: 51px;
+}
+.mark::after {
+    content: "";
+    border-width: 5.5px;
+    border-style: solid;
+    border-color: transparent transparent rgb(0, 157, 255) transparent;
+
+    position: absolute;
+    left: 51px;
+    top: -5px;
+}
+.mark {
+    position: absolute;
+    left: -5px;
+    top: -5px;
+
+    color: black;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+}
+.mark div {
+    width: 100px;
+    background-color: lightskyblue;
+    text-align: center;
+    transform: rotate(-45deg) translate(-29px, -9px);
+    font-size: 14px;
+
+    /* height: 40px; */
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: gray;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+@media screen and (max-width: 990px){
+    .text {
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 740px){
+    .text {
+        font-size: 17px;
+    }
+}
+@media screen and (max-width: 730px){
+    .text {
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 672px){
+    .text {
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 670px){
+    .text {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 590px){
+    .text {
+        font-size: 13px;
+    }
+}
+@media screen and (max-width: 550px){
+    .text {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 500px){
+    .text {
+        font-size: 11px;
+    }
+}
+@media screen and (max-width: 650px){
+    .hover__div {
+        flex-direction: column;
+    }
+}
